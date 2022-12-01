@@ -1,0 +1,59 @@
+.header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.header>span {
+  color: cadetblue;
+  font-weight: 200;
+  font-style: italic;
+  margin-left: 30px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+@media (min-width: 700px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.spinner {
+  font-size: 2rem;
+  color: cadetblue;
+  animation: loader 1.5s ease infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

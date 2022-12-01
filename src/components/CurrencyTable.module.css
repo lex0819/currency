@@ -1,0 +1,19 @@
+.table {
+  width: auto;
+}
+
+.table td {
+  border: 1px solid lightgrey;
+  text-align: left;
+  padding: 5px;
+  word-wrap: break-word;
+}
+
+.table thead {
+  background-color: lightpink;
+  font-weight: 500;
+}
+
+.table tr {
+  cursor: pointer;
+}
