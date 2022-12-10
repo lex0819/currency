@@ -1,6 +1,8 @@
+import { observer } from 'mobx-react-lite';
+import CurrencyList from '../store/cbrf.js';
 import styles from './Switcher.module.css';
 
-function Switcher({ convertTo, changeConvert }) {
+function Switcher() {
   return (
     <div className={styles.container}>
       <div className={styles.switchBox}>
@@ -8,8 +10,8 @@ function Switcher({ convertTo, changeConvert }) {
         <label className={styles.switcher}>
           <input
             type="checkbox"
-            checked={convertTo}
-            onChange={() => changeConvert()}
+            checked={CurrencyList.convertWay}
+            onChange={() => CurrencyList.changeConvertWay()}
           />
           <span className={styles.slider}></span>
         </label>
@@ -18,4 +20,4 @@ function Switcher({ convertTo, changeConvert }) {
     </div>
   );
 }
-export default Switcher;
+export default observer(Switcher);
