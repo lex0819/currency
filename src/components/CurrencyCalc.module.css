@@ -1,51 +1,27 @@
-.btn {
-  font-size: 2rem;
-  color: teal;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  padding: 5px;
-  width: 3rem;
-  cursor: pointer;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-  transition: box-shadow 0.3s ease;
-}
-
-.btn:active {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
-}
-
 .calc {
   margin-top: 20px;
   width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   gap: 15px;
 }
 
-.form label {
+.calc label {
   text-align: left;
 }
 
-.form span {
+.calc span {
   margin-left: 10px;
 }
 
-.form input {
+.calc input {
   display: block;
   padding: 10px;
   margin-right: 10px;
 }
 
 .input {
-  display: flex;
+  width: 200px;
 }
 
 .total {
@@ -58,4 +34,24 @@
 .total span {
   display: inline-block;
   margin-left: 20px;
+}
+
+.fakeInput {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fakeInput strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.fakeInput span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 200;
 }

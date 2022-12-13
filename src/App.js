@@ -1,4 +1,4 @@
-import Currency from './components/Currency';
+import Currency from './components/Currency.jsx';
 // import Test from './components/Test';
 import './App.css';
 

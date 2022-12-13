@@ -17,11 +17,12 @@
   width: 100%;
   margin: 0 auto;
   padding: 5px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px;
+  gap: 10px; */
+  position: relative;
 }
 
 @media (min-width: 700px) {
