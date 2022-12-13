@@ -1,5 +1,16 @@
 .table {
   width: auto;
+  background-color: #fff;
+  position: absolute;
+  top: -2000px;
+  left: 0;
+  z-index: 5;
+  transition: top 0.7s ease;
+}
+
+.table_active {
+  background-color: rgb(202, 247, 247);
+  top: 0;
 }
 
 .table td {

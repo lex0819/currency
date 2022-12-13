@@ -16,8 +16,12 @@ function CurrencyTable() {
 
   return (
     <>
-      {CurrencyList.showAllCurrency && (
-        <table className={styles.table}>
+      {
+        /* CurrencyList.showAllCurrency && */ <table
+          className={`${styles.table} ${
+            CurrencyList.showAllCurrency ? styles.table_active : ''
+          }`}
+        >
           <thead>
             <tr>
               <td>Name</td>
@@ -36,7 +40,7 @@ function CurrencyTable() {
             ))}
           </tbody>
         </table>
-      )}
+      }
     </>
   );
 }
