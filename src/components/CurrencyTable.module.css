@@ -28,3 +28,15 @@
 .table tr {
   cursor: pointer;
 }
+
+.table tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.table tr:active {
+  background-color: lightyellow;
+}
+
+.table tr:hover {
+  -webkit-text-stroke: 1px #000;
+}
