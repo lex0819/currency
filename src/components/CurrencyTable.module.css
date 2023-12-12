@@ -1,16 +1,19 @@
 .table {
   width: auto;
+  margin: 0 auto;
   background-color: #fff;
   position: absolute;
-  top: -2000px;
+  top: 0;
   left: 0;
+  right: 0;
   z-index: 5;
-  transition: top 0.7s ease;
+  transform: translateY(-100%);
+  transition: transform .7s ease;
 }
 
-.table_active {
+.table.table_active {
   background-color: rgb(202, 247, 247);
-  top: 0;
+  transform: translateY(0);
 }
 
 .table td {

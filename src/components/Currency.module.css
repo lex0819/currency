@@ -1,6 +1,5 @@
 .header {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 10px;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
@@ -21,8 +20,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px; */
-  position: relative;
+  gap: 10px; 
+  position: relative;*/
 }
 
 @media (min-width: 700px) {

@@ -15,6 +15,7 @@ function Currency() {
 
   return (
     <>
+      <CurrencyTable />
       <h2 className={styles.header}>
         Currency exchange rate from the official website of the Central Bank of
         the Russian Federation for
@@ -30,7 +31,6 @@ function Currency() {
       )}
       {CurrencyList.rates && (
         <div className={styles.container}>
-          <CurrencyTable />
           <CurrencyCalc />
         </div>
       )}
