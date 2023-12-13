@@ -28,5 +28,5 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.KEY }}
           rm: true
-          source: './build/*'
-          target: '/elenivan.ru/htdocs/currency'
+          source: ./build/*
+          target: /home/${{ secrets.USERNAME }}/elenivan.ru/htdocs/currency
