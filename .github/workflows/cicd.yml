@@ -20,13 +20,4 @@ jobs:
            run: npm run build
 
          - name: Copy files to server
-           uses: appleboy/scp-action@master
-           with:
-              host: ${{ secrets.HOST }}
-              username: ${{ secrets.USERNAME }}
-              # password: ${{ secrets.PASSWORD }}
-              port: ${{ secrets.PORT }}
-              key: ${{ secrets.KEY }}
-              rm: true
-              source: "./build/*"
-              target: "/home/${{ secrets.USERNAME }}/elenivan.ru/htdocs/currency/"
+           run: cd build && rsync -e "ssh -p ${{ secrets.PORT }} -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/elenivan.ru/htdocs/currency
