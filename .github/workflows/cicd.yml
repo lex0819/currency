@@ -16,8 +16,17 @@ jobs:
          - name: Install Nodejs
            run: npm ci
 
-         - name: Build
+         - name: Create production Build
            run: npm run build
+
+         - name: Set Env
+           run: set -eu
+         - name: Create .ssh folder in docker
+           run: mkdir "$HOME/.ssh"
+         - name: Setup key in docker
+           run: echo "${{ secrets.KEY }}" > "$HOME/.ssh/key"
+         - name: Setup responsibillity of key
+           run: chmod 600 "$HOME/.ssh/key"
 
          - name: Copy files to server
            run: cd build && rsync -e "ssh -p ${{ secrets.PORT }} -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/elenivan.ru/htdocs/currency
